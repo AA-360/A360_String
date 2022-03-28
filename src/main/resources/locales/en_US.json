@@ -61,5 +61,10 @@
 	"SortString.value.label": "String:",
 	"SortString.value.description": "",
 	"SortString.description": "Sort String",
-	"SortString.node_label": "Sort {{value}} and assign to {{returnTo}}"
+	"SortString.node_label": "Sort {{value}} and assign to {{returnTo}}",
+
+	"StringHasOnlyNumbers.value.label": "String:",
+	"StringHasOnlyNumbers.value.description": "",
+	"StringHasOnlyNumbers.description": "Only Numbers",
+	"StringHasOnlyNumbers.node_label": "Check if {{value}} contains only numbers"
 }

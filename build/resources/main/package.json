@@ -4,8 +4,8 @@
     "description": "",
     "group": "com.automationanywhere",
     "artifactName": "String_Uts",
-    "packageVersion": "1.5-20220124-150521",
-    "codeVersion": "1.5-20220124-150521",
+    "packageVersion": "1.6-20220328-120141",
+    "codeVersion": "1.6-20220328-120141",
     "author": "",
     "commands": [
         {
@@ -129,6 +129,26 @@
                     "name": "pattern",
                     "label": "[[StringEndsWith.pattern.label]]",
                     "description": "[[StringEndsWith.pattern.description]]",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "StringHasOnlyNumbers",
+            "label": "StringHasOnlyNumbers",
+            "description": "[[StringHasOnlyNumbers.description]]",
+            "nodeLabel": "[[StringHasOnlyNumbers.node_label]]",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.conditionals.StringHasOnlyNumbersCondition",
+            "attributes": [
+                {
+                    "name": "value",
+                    "label": "[[StringHasOnlyNumbers.value.label]]",
+                    "description": "[[StringHasOnlyNumbers.value.description]]",
                     "type": "TEXT",
                     "rules": [
                         {

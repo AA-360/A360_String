@@ -3,6 +3,7 @@ import com.automationanywhere.botcommand.data.impl.ListValue;
 import com.automationanywhere.botcommand.samples.commands.basic.GetAllMatches;
 import com.automationanywhere.botcommand.samples.commands.basic.GetFirstMatch;
 import com.automationanywhere.botcommand.samples.commands.conditionals.StringEndsWith;
+import com.automationanywhere.botcommand.samples.commands.conditionals.StringHasOnlyNumbers;
 import com.automationanywhere.botcommand.samples.commands.conditionals.StringMatches;
 import com.automationanywhere.botcommand.samples.commands.conditionals.StringStartsWith;
 import org.testng.annotations.Test;
@@ -22,16 +23,22 @@ public class TEST {
 
     }
     @Test
+    public void onlynumb(){
+        StringHasOnlyNumbers a = new StringHasOnlyNumbers();
+
+        System.out.println(a.validate("10001247501").toString());
+
+    }
     public void regex(){
         GetFirstMatch a = new GetFirstMatch();
         GetAllMatches b = new GetAllMatches();
 
-        System.out.println(a.action("A29a","(\\d)*").toString());
-        //ListValue<String> values = b.action("hello world!","\\D{5}");
+        System.out.println(a.action("D/10001247501","(?<=/).*").toString());
+        ListValue<String> values = b.action("D/10001247501","(?<!/).*");
 
-//        for(Value v: values.get()){
-//            System.out.println(v.toString());
-//        }
+        for(Value v: values.get()){
+            System.out.println("-" + v.toString());
+        }
     }
 
     public void teste(){

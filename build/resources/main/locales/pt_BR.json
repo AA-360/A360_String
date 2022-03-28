@@ -63,5 +63,10 @@
     "SortString.value.label": "Texto:",
     "SortString.value.description": "",
     "SortString.description": "Ordena String",
-    "SortString.node_label": "Ordena {{value}} e atribua à {{returnTo}}"
+    "SortString.node_label": "Ordena {{value}} e atribua à {{returnTo}}",
+
+    "StringHasOnlyNumbers.value.label": "Texto:",
+    "StringHasOnlyNumbers.value.description": "",
+    "StringHasOnlyNumbers.description": "Apenas numeros",
+    "StringHasOnlyNumbers.node_label": "Verifica se {{value}} contem apenas números"
 }
