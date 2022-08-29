@@ -4,8 +4,8 @@
     "description": "",
     "group": "com.automationanywhere",
     "artifactName": "String_Uts",
-    "packageVersion": "1.6-20220328-120141",
-    "codeVersion": "1.6-20220328-120141",
+    "packageVersion": "1.7-20220823-164452",
+    "codeVersion": "1.7-20220823-164452",
     "author": "",
     "commands": [
         {
@@ -72,6 +72,42 @@
                     "label": "[[GetFirstMatch.pattern.label]]",
                     "description": "[[GetFirstMatch.pattern.description]]",
                     "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "LockMatch",
+            "label": "LockMatch",
+            "description": "[[LockMatch.description]]",
+            "nodeLabel": "[[LockMatch.node_label]]",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.basic.LockMatchCommand",
+            "icon": "pkg.svg",
+            "returnType": "NUMBER",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "text1",
+                    "label": "[[LockMatch.value1.label]]",
+                    "description": "[[LockMatch.value1.description]]",
+                    "type": "TEXTAREA",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "text2",
+                    "label": "[[LockMatch.value2.label]]",
+                    "description": "[[LockMatch.value2.description]]",
+                    "type": "TEXTAREA",
                     "rules": [
                         {
                             "name": "NOT_EMPTY"

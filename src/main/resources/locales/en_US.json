@@ -66,5 +66,12 @@
 	"StringHasOnlyNumbers.value.label": "String:",
 	"StringHasOnlyNumbers.value.description": "",
 	"StringHasOnlyNumbers.description": "Only Numbers",
-	"StringHasOnlyNumbers.node_label": "Check if {{value}} contains only numbers"
+	"StringHasOnlyNumbers.node_label": "Check if {{value}} contains only numbers",
+
+	"LockMatch.value1.label": "Text:",
+	"LockMatch.value1.description": "",
+	"LockMatch.value2.label": "Text:",
+	"LockMatch.value2.description": "",
+	"LockMatch.description": "Matches 2 strings in percentage",
+	"LockMatch.node_label": "Match {{text1}} and {{text2}} result percentage to -> {{returnTo}}"
 }

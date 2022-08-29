@@ -68,5 +68,15 @@
     "StringHasOnlyNumbers.value.label": "Texto:",
     "StringHasOnlyNumbers.value.description": "",
     "StringHasOnlyNumbers.description": "Apenas numeros",
-    "StringHasOnlyNumbers.node_label": "Verifica se {{value}} contem apenas números"
+    "StringHasOnlyNumbers.node_label": "Verifica se {{value}} contem apenas números",
+
+    "LockMatch.value1.label": "Texto:",
+    "LockMatch.value1.description": "",
+    "LockMatch.value2.label": "Texto:",
+    "LockMatch.value2.description": "",
+    "LockMatch.description": "Compara duas strings em porcentage",
+    "LockMatch.node_label": "Compara {{text1}} com {{text2}} resultado em porcentagem em -> {{returnTo}}"
 }
+
+
+
