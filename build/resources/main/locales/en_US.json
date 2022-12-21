@@ -49,6 +49,8 @@
 	"GetFirstMatch.value.description": "Sample: hello world!",
 	"GetFirstMatch.pattern.label": "Regex:",
 	"GetFirstMatch.pattern.description": "Sample: \\D{5}",
+	"GetFirstMatch.caseInsensitive.label": "Case Insensitive:",
+	"GetFirstMatch.caseInsensitive.description": "",
 
 	"GetAllMatches.description": "Get all matches regex from string",
 	"GetAllMatches.node_label": "get {{pattern}} from {{value}}",
@@ -57,6 +59,8 @@
 	"GetAllMatches.value.description": "Sample: hello world!",
 	"GetAllMatches.pattern.label": "Regex:",
 	"GetAllMatches.pattern.description": "Sample: \\D{5}",
+	"GetAllMatches.caseInsensitive.label": "Case Insensitive:",
+	"GetAllMatches.caseInsensitive.description": "",
 
 	"SortString.value.label": "String:",
 	"SortString.value.description": "",
