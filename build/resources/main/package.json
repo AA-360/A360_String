@@ -4,8 +4,8 @@
     "description": "",
     "group": "com.automationanywhere",
     "artifactName": "String_Uts",
-    "packageVersion": "1.7-20220823-164452",
-    "codeVersion": "1.7-20220823-164452",
+    "packageVersion": "1.8-20221221-163136",
+    "codeVersion": "1.8-20221221-163136",
     "author": "",
     "commands": [
         {
@@ -36,6 +36,21 @@
                     "label": "[[GetAllMatches.pattern.label]]",
                     "description": "[[GetAllMatches.pattern.description]]",
                     "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "caseInsensitive",
+                    "label": "[[GetAllMatches.caseInsensitive.label]]",
+                    "description": "[[GetAllMatches.caseInsensitive.description]]",
+                    "type": "CHECKBOX",
+                    "defaultValue": {
+                        "boolean": false,
+                        "type": "BOOLEAN"
+                    },
                     "rules": [
                         {
                             "name": "NOT_EMPTY"
@@ -72,6 +87,21 @@
                     "label": "[[GetFirstMatch.pattern.label]]",
                     "description": "[[GetFirstMatch.pattern.description]]",
                     "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "caseInsensitive",
+                    "label": "[[GetFirstMatch.caseInsensitive.label]]",
+                    "description": "[[GetFirstMatch.caseInsensitive.description]]",
+                    "type": "CHECKBOX",
+                    "defaultValue": {
+                        "boolean": false,
+                        "type": "BOOLEAN"
+                    },
                     "rules": [
                         {
                             "name": "NOT_EMPTY"

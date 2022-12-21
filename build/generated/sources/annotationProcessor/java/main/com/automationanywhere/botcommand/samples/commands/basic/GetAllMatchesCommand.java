@@ -6,6 +6,7 @@ import com.automationanywhere.botcommand.data.Value;
 import com.automationanywhere.botcommand.exception.BotCommandException;
 import com.automationanywhere.commandsdk.i18n.Messages;
 import com.automationanywhere.commandsdk.i18n.MessagesFactory;
+import java.lang.Boolean;
 import java.lang.ClassCastException;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -54,8 +55,18 @@ public final class GetAllMatchesCommand implements BotCommand {
       throw new BotCommandException(MESSAGES_GENERIC.getString("generic.validation.notEmpty","pattern"));
     }
 
+    if(parameters.containsKey("caseInsensitive") && parameters.get("caseInsensitive") != null && parameters.get("caseInsensitive").get() != null) {
+      convertedParameters.put("caseInsensitive", parameters.get("caseInsensitive").get());
+      if(convertedParameters.get("caseInsensitive") !=null && !(convertedParameters.get("caseInsensitive") instanceof Boolean)) {
+        throw new BotCommandException(MESSAGES_GENERIC.getString("generic.UnexpectedTypeReceived","caseInsensitive", "Boolean", parameters.get("caseInsensitive").get().getClass().getSimpleName()));
+      }
+    }
+    if(convertedParameters.get("caseInsensitive") == null) {
+      throw new BotCommandException(MESSAGES_GENERIC.getString("generic.validation.notEmpty","caseInsensitive"));
+    }
+
     try {
-      Optional<Value> result =  Optional.ofNullable(command.action((String)convertedParameters.get("value"),(String)convertedParameters.get("pattern")));
+      Optional<Value> result =  Optional.ofNullable(command.action((String)convertedParameters.get("value"),(String)convertedParameters.get("pattern"),(Boolean)convertedParameters.get("caseInsensitive")));
       return logger.traceExit(result);
     }
     catch (ClassCastException e) {

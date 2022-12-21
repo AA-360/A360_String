@@ -28,8 +28,8 @@ import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static com.automationanywhere.commandsdk.model.AttributeType.SELECT;
-import static com.automationanywhere.commandsdk.model.AttributeType.TEXT;
+import static com.automationanywhere.commandsdk.model.AttributeType.*;
+import static com.automationanywhere.commandsdk.model.DataType.BOOLEAN;
 import static com.automationanywhere.commandsdk.model.DataType.LIST;
 import static com.automationanywhere.commandsdk.model.DataType.STRING;
 
@@ -58,9 +58,18 @@ public class GetFirstMatch {
             @Idx(index = "2", type = TEXT)
             @Pkg(label = "[[GetFirstMatch.pattern.label]]",description = "[[GetFirstMatch.pattern.description]]")
             @NotEmpty
-                    String pattern
+                    String pattern,
+            @Idx(index = "3", type = CHECKBOX)
+            @Pkg(label = "[[GetFirstMatch.caseInsensitive.label]]",description = "[[GetFirstMatch.caseInsensitive.description]]",default_value = "false",default_value_type = BOOLEAN)
+            @NotEmpty
+                    Boolean caseInsensitive
     ) {
         Pattern p = Pattern.compile(pattern);
+
+        if(caseInsensitive){
+            p = Pattern.compile(pattern,Pattern.CASE_INSENSITIVE);
+        }
+
         Matcher m = p.matcher(value);
         while(m.find()) {
             return new StringValue(m.group());

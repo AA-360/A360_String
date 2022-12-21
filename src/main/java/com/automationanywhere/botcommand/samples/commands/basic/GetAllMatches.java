@@ -11,9 +11,9 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static com.automationanywhere.commandsdk.model.AttributeType.CHECKBOX;
 import static com.automationanywhere.commandsdk.model.AttributeType.TEXT;
-import static com.automationanywhere.commandsdk.model.DataType.LIST;
-import static com.automationanywhere.commandsdk.model.DataType.STRING;
+import static com.automationanywhere.commandsdk.model.DataType.*;
 
 
 @BotCommand
@@ -41,12 +41,20 @@ public class GetAllMatches {
             @Idx(index = "2", type = TEXT)
             @Pkg(label = "[[GetAllMatches.pattern.label]]",description = "[[GetAllMatches.pattern.description]]")
             @NotEmpty
-                    String pattern
+                    String pattern,
+            @Idx(index = "3", type = CHECKBOX)
+            @Pkg(label = "[[GetAllMatches.caseInsensitive.label]]",description = "[[GetAllMatches.caseInsensitive.description]]",default_value = "false",default_value_type = BOOLEAN)
+            @NotEmpty
+                    Boolean caseInsensitive
     ) {
         ListValue<String> OUTPUT = new ListValue<String>();
         List<Value> ListValues = new ArrayList<>();
 
         Pattern p = Pattern.compile(pattern);
+        if(caseInsensitive){
+            p = Pattern.compile(pattern,Pattern.CASE_INSENSITIVE);
+        }
+
         Matcher m = p.matcher(value);
         while(m.find()) {
             ListValues.add(new StringValue(m.group()));
