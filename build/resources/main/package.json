@@ -4,8 +4,8 @@
     "description": "",
     "group": "com.automationanywhere",
     "artifactName": "String_Uts",
-    "packageVersion": "1.9-20221221-163625",
-    "codeVersion": "1.9-20221221-163625",
+    "packageVersion": "2.1-20230404-122858",
+    "codeVersion": "2.1-20230404-122858",
     "author": "",
     "commands": [
         {
@@ -347,6 +347,15 @@
                     ]
                 }
             ]
+        }
+    ],
+    "variables": [
+        {
+            "name": "TabChar",
+            "label": "TabChar",
+            "description": "Returns Tab Char as a String",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.variable.TabCharVariable",
+            "type": "STRING"
         }
     ]
 }

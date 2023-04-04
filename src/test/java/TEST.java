@@ -42,7 +42,7 @@ public class TEST {
 
         //System.out.println(b.action("asdasd_asdasds_111.txt",".*?(?=_)").toString());
         //ListValue<String> values = b.action(text,"(?<=InstallLocation\\s*:\\s).*(approve.*)",true);
-        StringValue value = a.action(text,"(?<=InstallLocation\\s*:\\s).*(approve.*)",true);
+        StringValue value = a.action(text,"(InstallLocation\\s*:\\s).*(approve.*)",true);
         System.out.println("-" + value.toString());
 
         //for(Value v: values.get()){
