@@ -1,9 +1,7 @@
 import com.automationanywhere.botcommand.data.Value;
 import com.automationanywhere.botcommand.data.impl.ListValue;
 import com.automationanywhere.botcommand.data.impl.StringValue;
-import com.automationanywhere.botcommand.samples.commands.basic.GetAllMatches;
-import com.automationanywhere.botcommand.samples.commands.basic.GetFirstMatch;
-import com.automationanywhere.botcommand.samples.commands.basic.LockMatch;
+import com.automationanywhere.botcommand.samples.commands.basic.*;
 import com.automationanywhere.botcommand.samples.commands.conditionals.StringEndsWith;
 import com.automationanywhere.botcommand.samples.commands.conditionals.StringHasOnlyNumbers;
 import com.automationanywhere.botcommand.samples.commands.conditionals.StringMatches;
@@ -17,6 +15,24 @@ import java.io.FileReader;
 import java.util.Arrays;
 
 public class TEST {
+
+    @Test
+    public void split(){
+        String val = "123456789";
+        SliceString a = new SliceString();
+
+        System.out.println(a.action(val, "-4:-1").toString());
+
+
+    }
+
+    public void reverse(){
+        String val = "123456789";
+        ReverseString a = new ReverseString();
+
+        System.out.println(a.action(val).toString());
+
+    }
 
     public void sort(){
         String abcd = "bdca5847";
@@ -34,7 +50,7 @@ public class TEST {
         System.out.println(a.validate("10001247501").toString());
 
     }
-    @Test
+
     public void regex()throws Exception{
         GetFirstMatch a = new GetFirstMatch();
         GetAllMatches b = new GetAllMatches();

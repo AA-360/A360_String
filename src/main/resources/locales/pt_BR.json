@@ -79,7 +79,17 @@
     "LockMatch.value2.label": "Texto:",
     "LockMatch.value2.description": "",
     "LockMatch.description": "Compara duas strings em porcentage",
-    "LockMatch.node_label": "Compara {{text1}} com {{text2}} resultado em porcentagem em -> {{returnTo}}"
+    "LockMatch.node_label": "Compara {{text1}} com {{text2}} resultado em porcentagem em -> {{returnTo}}",
+
+    "ReverseString.value.label": "Texto:",
+    "ReverseString.value.description": "",
+    "ReverseString.description": "Inverte o texto",
+    "ReverseString.node_label": "Inverte {{value}} e atribui em -> {{returnTo}}",
+
+    "SliceString.value.label": "Texto:",
+    "SliceString.value.description": "",
+    "SliceString.description": "Slice Texto",
+    "SliceString.node_label": "Quebra {{value}} como {{index}} e atribui em -> {{returnTo}}"
 }
 
 

@@ -77,5 +77,15 @@
 	"LockMatch.value2.label": "Text:",
 	"LockMatch.value2.description": "",
 	"LockMatch.description": "Matches 2 strings in percentage",
-	"LockMatch.node_label": "Match {{text1}} and {{text2}} result percentage to -> {{returnTo}}"
+	"LockMatch.node_label": "Match {{text1}} and {{text2}} result percentage to -> {{returnTo}}",
+
+	"ReverseString.value.label": "String:",
+	"ReverseString.value.description": "",
+	"ReverseString.description": "Reverse String",
+	"ReverseString.node_label": "Reverse {{value}} and assign to {{returnTo}}",
+
+	"SliceString.value.label": "String:",
+	"SliceString.value.description": "",
+	"SliceString.description": "Slice String",
+	"SliceString.node_label": "Slice {{value}} as {{index}} and assign to {{returnTo}}"
 }

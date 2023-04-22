@@ -4,8 +4,8 @@
     "description": "",
     "group": "com.automationanywhere",
     "artifactName": "String_Uts",
-    "packageVersion": "2.1-20230404-122858",
-    "codeVersion": "2.1-20230404-122858",
+    "packageVersion": "2.2-20230406-122323",
+    "codeVersion": "2.2-20230406-122323",
     "author": "",
     "commands": [
         {
@@ -138,6 +138,67 @@
                     "label": "[[LockMatch.value2.label]]",
                     "description": "[[LockMatch.value2.description]]",
                     "type": "TEXTAREA",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "ReverseString",
+            "label": "ReverseString",
+            "description": "[[ReverseString.description]]",
+            "nodeLabel": "[[SortString.node_label]]",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.basic.ReverseStringCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "value",
+                    "label": "[[ReverseString.value.label]]",
+                    "description": "[[ReverseString.value.description]]",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "SliceString",
+            "label": "SliceString",
+            "description": "[[SliceString.description]]",
+            "nodeLabel": "[[SliceString.node_label]]",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.basic.SliceStringCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "value",
+                    "label": "[[SliceString.value.label]]",
+                    "description": "[[SliceString.value.description]]",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "index",
+                    "label": "[[SliceString.index.label]]",
+                    "description": "[[SliceString.index.description]]",
+                    "type": "TEXT",
                     "rules": [
                         {
                             "name": "NOT_EMPTY"
