@@ -4,8 +4,8 @@
     "description": "",
     "group": "com.automationanywhere",
     "artifactName": "String_Uts",
-    "packageVersion": "2.2-20230406-122323",
-    "codeVersion": "2.2-20230406-122323",
+    "packageVersion": "2.3-20240215-113240",
+    "codeVersion": "2.3-20240215-113240",
     "author": "",
     "commands": [
         {
@@ -46,6 +46,21 @@
                     "name": "caseInsensitive",
                     "label": "[[GetAllMatches.caseInsensitive.label]]",
                     "description": "[[GetAllMatches.caseInsensitive.description]]",
+                    "type": "CHECKBOX",
+                    "defaultValue": {
+                        "boolean": false,
+                        "type": "BOOLEAN"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "multline",
+                    "label": "[[GetFirstMatch.multline.label]]",
+                    "description": "[[GetFirstMatch.multline.description]]",
                     "type": "CHECKBOX",
                     "defaultValue": {
                         "boolean": false,
@@ -97,6 +112,21 @@
                     "name": "caseInsensitive",
                     "label": "[[GetFirstMatch.caseInsensitive.label]]",
                     "description": "[[GetFirstMatch.caseInsensitive.description]]",
+                    "type": "CHECKBOX",
+                    "defaultValue": {
+                        "boolean": false,
+                        "type": "BOOLEAN"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "multline",
+                    "label": "[[GetFirstMatch.multline.label]]",
+                    "description": "[[GetFirstMatch.multline.description]]",
                     "type": "CHECKBOX",
                     "defaultValue": {
                         "boolean": false,

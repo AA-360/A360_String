@@ -49,8 +49,10 @@
 	"GetFirstMatch.value.description": "Sample: hello world!",
 	"GetFirstMatch.pattern.label": "Regex:",
 	"GetFirstMatch.pattern.description": "Sample: \\D{5}",
-	"GetFirstMatch.caseInsensitive.label": "Case Insensitive:",
 	"GetFirstMatch.caseInsensitive.description": "",
+	"GetFirstMatch.caseInsensitive.label": "Case Insensitive",
+	"GetFirstMatch.multline.description": "",
+	"GetFirstMatch.multline.label": "Multiline",
 
 	"GetAllMatches.description": "Get all matches regex from string",
 	"GetAllMatches.node_label": "get {{pattern}} from {{value}}",

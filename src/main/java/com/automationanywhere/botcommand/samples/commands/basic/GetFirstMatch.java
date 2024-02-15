@@ -62,13 +62,16 @@ public class GetFirstMatch {
             @Idx(index = "3", type = CHECKBOX)
             @Pkg(label = "[[GetFirstMatch.caseInsensitive.label]]",description = "[[GetFirstMatch.caseInsensitive.description]]",default_value = "false",default_value_type = BOOLEAN)
             @NotEmpty
-                    Boolean caseInsensitive
+                    Boolean caseInsensitive,
+            @Idx(index = "4", type = CHECKBOX)
+            @Pkg(label = "[[GetFirstMatch.multline.label]]",description = "[[GetFirstMatch.multline.description]]",default_value = "false",default_value_type = BOOLEAN)
+            @NotEmpty
+            Boolean multline
     ) {
-        Pattern p = Pattern.compile(pattern);
+        int conf = caseInsensitive?Pattern.CASE_INSENSITIVE:0;
+        conf += multline?Pattern.MULTILINE:0;
 
-        if(caseInsensitive){
-            p = Pattern.compile(pattern,Pattern.CASE_INSENSITIVE);
-        }
+        Pattern p = Pattern.compile(pattern,conf);
 
         Matcher m = p.matcher(value);
         while(m.find()) {

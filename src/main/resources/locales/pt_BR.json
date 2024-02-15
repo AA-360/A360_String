@@ -51,8 +51,9 @@
     "GetFirstMatch.value.description": "Exemplo: hello world!",
     "GetFirstMatch.pattern.label": "Regex:",
     "GetFirstMatch.pattern.description": "Exemplo: \\D{5}",
-    "GetFirstMatch.caseInsensitive.label": "Case Insensitive:",
-    "GetAllMatches.caseInsensitive.description": "",
+    "GetFirstMatch.caseInsensitive.label": "Case Insensitive",
+    "GetFirstMatch.multline.description": "",
+    "GetFirstMatch.multline.label": "Multiline",
 
     "GetAllMatches.description": "Retorna todas as ocorrencias de regex na string",
     "GetAllMatches.node_label": "Procure {{pattern}} em {{value}}",

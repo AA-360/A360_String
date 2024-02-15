@@ -16,7 +16,7 @@ import java.util.Arrays;
 
 public class TEST {
 
-    @Test
+    //@Test
     public void split(){
         String val = "123456789";
         SliceString a = new SliceString();
@@ -51,6 +51,7 @@ public class TEST {
 
     }
 
+    @Test
     public void regex()throws Exception{
         GetFirstMatch a = new GetFirstMatch();
         GetAllMatches b = new GetAllMatches();
@@ -58,7 +59,7 @@ public class TEST {
 
         //System.out.println(b.action("asdasd_asdasds_111.txt",".*?(?=_)").toString());
         //ListValue<String> values = b.action(text,"(?<=InstallLocation\\s*:\\s).*(approve.*)",true);
-        StringValue value = a.action(text,"(InstallLocation\\s*:\\s).*(approve.*)",true);
+        StringValue value = a.action(text,"^([0-9]|[A-Z]){10,}",false,false);
         System.out.println("-" + value.toString());
 
         //for(Value v: values.get()){

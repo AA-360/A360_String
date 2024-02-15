@@ -45,15 +45,19 @@ public class GetAllMatches {
             @Idx(index = "3", type = CHECKBOX)
             @Pkg(label = "[[GetAllMatches.caseInsensitive.label]]",description = "[[GetAllMatches.caseInsensitive.description]]",default_value = "false",default_value_type = BOOLEAN)
             @NotEmpty
-                    Boolean caseInsensitive
+                    Boolean caseInsensitive,
+            @Idx(index = "4", type = CHECKBOX)
+            @Pkg(label = "[[GetFirstMatch.multline.label]]",description = "[[GetFirstMatch.multline.description]]",default_value = "false",default_value_type = BOOLEAN)
+            @NotEmpty
+            Boolean multline
     ) {
         ListValue<String> OUTPUT = new ListValue<String>();
         List<Value> ListValues = new ArrayList<>();
 
-        Pattern p = Pattern.compile(pattern);
-        if(caseInsensitive){
-            p = Pattern.compile(pattern,Pattern.CASE_INSENSITIVE);
-        }
+        int conf = caseInsensitive?Pattern.CASE_INSENSITIVE:0;
+        conf += multline?Pattern.MULTILINE:0;
+
+        Pattern p = Pattern.compile(pattern,conf);
 
         Matcher m = p.matcher(value);
         while(m.find()) {

@@ -65,8 +65,18 @@ public final class GetAllMatchesCommand implements BotCommand {
       throw new BotCommandException(MESSAGES_GENERIC.getString("generic.validation.notEmpty","caseInsensitive"));
     }
 
+    if(parameters.containsKey("multline") && parameters.get("multline") != null && parameters.get("multline").get() != null) {
+      convertedParameters.put("multline", parameters.get("multline").get());
+      if(convertedParameters.get("multline") !=null && !(convertedParameters.get("multline") instanceof Boolean)) {
+        throw new BotCommandException(MESSAGES_GENERIC.getString("generic.UnexpectedTypeReceived","multline", "Boolean", parameters.get("multline").get().getClass().getSimpleName()));
+      }
+    }
+    if(convertedParameters.get("multline") == null) {
+      throw new BotCommandException(MESSAGES_GENERIC.getString("generic.validation.notEmpty","multline"));
+    }
+
     try {
-      Optional<Value> result =  Optional.ofNullable(command.action((String)convertedParameters.get("value"),(String)convertedParameters.get("pattern"),(Boolean)convertedParameters.get("caseInsensitive")));
+      Optional<Value> result =  Optional.ofNullable(command.action((String)convertedParameters.get("value"),(String)convertedParameters.get("pattern"),(Boolean)convertedParameters.get("caseInsensitive"),(Boolean)convertedParameters.get("multline")));
       return logger.traceExit(result);
     }
     catch (ClassCastException e) {
