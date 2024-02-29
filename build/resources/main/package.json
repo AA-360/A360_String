@@ -4,8 +4,8 @@
     "description": "",
     "group": "com.automationanywhere",
     "artifactName": "String_Uts",
-    "packageVersion": "2.3-20240215-113240",
-    "codeVersion": "2.3-20240215-113240",
+    "packageVersion": "2.4-20240228-220328",
+    "codeVersion": "2.4-20240228-220328",
     "author": "",
     "commands": [
         {
@@ -254,6 +254,28 @@
                     "label": "[[SortString.value.label]]",
                     "description": "[[SortString.value.description]]",
                     "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "TextAreaAssign",
+            "label": "TextAreaAssign",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.basic.TextAreaAssignCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "value",
+                    "label": "Text:",
+                    "type": "TEXTAREA",
                     "rules": [
                         {
                             "name": "NOT_EMPTY"
